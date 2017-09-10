@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from NoiseMapExplorer.views import current_datetime, home
 
 urlpatterns = [
     url(r'^noisequest/', include('noisequest.urls')),
+    url(r'^home/$', home),
+    url(r'^time/$', current_datetime),
     url(r'^admin/', admin.site.urls),
 ]
